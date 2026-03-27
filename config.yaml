@@ -1,0 +1,33 @@
+project:
+  name: Projeckt_GNN
+  seed: 42
+  device: auto
+
+paths:
+  csv: gnn_uni/data/00_R_tot_for_Grains_and_Rho_Ratio.csv
+  grids: gnn_uni/data/00_grids
+  experiments: gnn_uni/exps
+
+data:
+  max_grains: 500
+  use_all_conditions: true
+  targets: [1e2, 1e3, 1e4, 1e5]
+
+model:
+  type: nnconv
+  node_features: 4
+  edge_features: 2
+  hidden_dim: 128
+  dropout: 0.2
+
+training:
+  epochs: 200
+  batch_size: 32
+  learning_rate: 0.001
+  train_fraction: 0.70
+  val_fraction: 0.15
+
+logging:
+  save_model: true
+  save_history: true
+  verbose: true

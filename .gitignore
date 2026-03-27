@@ -1,0 +1,43 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Logs and temp
+*.log
+*.tmp
+*.swp
+
+# ML artifacts
+*.pth
+*.pt
+*.ckpt
+*.onnx
+
+# Experiment outputs
+exps/
+gnn_uni/exps/
+
+# Large data artifacts (keep raw sources in repo only if needed)
+*.npz
+*.npy
